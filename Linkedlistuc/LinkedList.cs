@@ -10,7 +10,7 @@ namespace Linkedlistuc
     {
         public Node head;
 
-        internal int deletePerticulatElement(int v)
+        internal int DeletePerticulatElement(int v)
         {
             throw new NotImplementedException();
         }
@@ -128,6 +128,22 @@ namespace Linkedlistuc
                 temp = temp.next;
             }
             Console.WriteLine("Given LinkedList = " + head.data);
+        }
+        internal int deletePerticulatElement(int data)
+        {
+            Node temp = head;
+            int count = 1;
+            int position = 0;
+            while (temp.next != null)
+            {
+                if (temp.data == data)
+                {
+                    temp.next = temp.next.next;
+                }
+                temp = temp.next;
+                count++;
+            }
+            return count;
         }
     }
 }

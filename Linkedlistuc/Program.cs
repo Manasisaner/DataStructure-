@@ -28,6 +28,8 @@ namespace Linkedlistuc
            //ist.DeleteFirstNode();
             int position = list.deletePerticulatElement(30);
             list.AddAfterAtPerticulatPosition(30);
+            int position = list.deletePerticulatElement(30);
+            Console.WriteLine("\nthe size of linkedlist is {0} ", position);
 
             list.Search(30);
 
