@@ -25,7 +25,8 @@ namespace Linkedlistuc
             //list.InsertFront(56);
             //list.insertAtParticularPosition(2.30);
 
-            list.DeleteFirstNode();
+           //ist.DeleteFirstNode();
+            int position = list.deletePerticulatElement(30);
 
             list.Display();
             Console.Read();

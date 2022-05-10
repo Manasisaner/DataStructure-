@@ -9,35 +9,41 @@ namespace Linkedlistuc
  class LinkedList
   {
     public Node head;
-   //  public void Add(int data)
-   //{
-   //   Node node = new Node(data);
-   //         if (this.head == null)
-   //          this.head = node;
-   //      else
-   //      {
-   //           Node temp = head;
-   //           while (temp.next != null)
-   //           {
-   //               temp = temp.next;
-   //           }
-   //           temp.next = node;
-   //       }
-   //         Console.WriteLine("{0} inserted into the linked list",node.data);
-   //  }
 
-   //     public void Append(int data)
-   //    {
-   //        Node node = new Node(data);
-   //    Node temp = head;
-   //         while (temp.next != null)
-   //         {
-   //             temp = temp.next;
-   //         }
-   //       temp.next = node;
-   //         Console.WriteLine(node.data + " " + "Appended into Linked List ");
+        internal int deletePerticulatElement(int v)
+        {
+            throw new NotImplementedException();
+        }
 
-   //     }
+        //  public void Add(int data)
+        //{
+        //   Node node = new Node(data);
+        //         if (this.head == null)
+        //          this.head = node;
+        //      else
+        //      {
+        //           Node temp = head;
+        //           while (temp.next != null)
+        //           {
+        //               temp = temp.next;
+        //           }
+        //           temp.next = node;
+        //       }
+        //         Console.WriteLine("{0} inserted into the linked list",node.data);
+        //  }
+
+        //     public void Append(int data)
+        //    {
+        //        Node node = new Node(data);
+        //    Node temp = head;
+        //         while (temp.next != null)
+        //         {
+        //             temp = temp.next;
+        //         }
+        //       temp.next = node;
+        //         Console.WriteLine(node.data + " " + "Appended into Linked List ");
+
+        //     }
 
         internal void Display()
         {
@@ -62,6 +68,27 @@ namespace Linkedlistuc
             this.head = this.head.next;
             return this.head;
         }
+
+        public Node DeleteLastNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return null;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return newNode;
+        }
+        
     }
 
 }
