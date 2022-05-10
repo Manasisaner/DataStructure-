@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Linkedlistuc
 {
- class LinkedList
-  {
-    public Node head;
+    class LinkedList
+    {
+        public Node head;
 
         internal int deletePerticulatElement(int v)
         {
@@ -113,5 +113,21 @@ namespace Linkedlistuc
 
         }
 
-}
+        internal void AddAfterAtPerticulatPosition(int data)
+        {
+            Node newnode = new Node(40);
+            Node temp = head;
 
+            while (temp.next != null)
+            {
+                if (temp.data == data)
+                {
+                    newnode.next = temp.next;
+                    temp.next = newnode;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("Given LinkedList = " + head.data);
+        }
+    }
+}
