@@ -4,79 +4,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//namespace Linkedlistuc
-//{
-//  class LinkedList
-//    {
-//        public Node head;
-//        public void Add(int data)
-//        {
-//            Node node = new Node(data);
-//            if (this.head == null)
-//                this.head = node;
-//            else
-//            {
-//                Node temp = head;
-//                while (temp.next != null)
-//                {
-//                    temp = temp.next;
-//                }
-//                temp.next = node;
-//            }
-//            Console.WriteLine("{0} inserted into the linked list",node.data);
-//        }
-//    }
-//}
-
-namespace DataStructure
+namespace Linkedlistuc
 {
-    internal class LinkedList
-    {
-        public Node head;
-        public void Add(int data)
-        {
-            Node node = new Node(data);
-            if (this.head == null)
-            {
-                this.head = node;
-            }
-            else
-            {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
-                Console.WriteLine(node.data + " " + "inserted into Linked List ");
-            }
-        }
-        public void Append(int data)
-        {
-            Node node = new Node(data);
-            Node temp = head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
-            }
-            temp.next = node;
-            Console.WriteLine(node.data + " " + "Appended into Linked List ");
-            Display();
+ class LinkedList
+  {
+    public Node head;
+   //  public void Add(int data)
+   //{
+   //   Node node = new Node(data);
+   //         if (this.head == null)
+   //          this.head = node;
+   //      else
+   //      {
+   //           Node temp = head;
+   //           while (temp.next != null)
+   //           {
+   //               temp = temp.next;
+   //           }
+   //           temp.next = node;
+   //       }
+   //         Console.WriteLine("{0} inserted into the linked list",node.data);
+   //  }
 
-        }
-        public void Display()
+   //     public void Append(int data)
+   //    {
+   //        Node node = new Node(data);
+   //    Node temp = head;
+   //         while (temp.next != null)
+   //         {
+   //             temp = temp.next;
+   //         }
+   //       temp.next = node;
+   //         Console.WriteLine(node.data + " " + "Appended into Linked List ");
+
+   //     }
+
+        internal void Display()
         {
-            Node temp = head;
+            Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("There is no element int he linked List");
+                Console.WriteLine("Empty Linked list");
+                return;
             }
             while (temp != null)
             {
-                Console.Write(temp.data + "  ");
+                Console.Write(temp.data + " ");
                 temp = temp.next;
             }
-            Console.WriteLine(" ");
+        }
+        internal Node DeleteFirstNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
         }
     }
+
 }
+

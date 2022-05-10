@@ -17,13 +17,16 @@ namespace Linkedlistuc
             //list.Add(56);
             //list.Add(30);
             //list.Add(70);
-            //list.InsertFront(70);
-            //list.InsertFront(30);
-            //list.InsertFront(56);
-
-            list.InsertFront(70);
+             list.InsertFront(70);
+          list.InsertFront(30);
             list.InsertFront(56);
-            list.insertAtParticularPosition(2.30);
+
+            //list.InsertFront(70);
+            //list.InsertFront(56);
+            //list.insertAtParticularPosition(2.30);
+
+            list.DeleteFirstNode();
+
             list.Display();
             Console.Read();
           
