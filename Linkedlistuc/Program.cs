@@ -14,9 +14,13 @@ namespace Linkedlistuc
         {
             Console.WriteLine("-------Welcome To Data Structure Program-------");
             LinkedList list = new LinkedList();//creating object of linkedlist class
-            list.Add(56);
-            list.Add(30);
-            list.Add(70);
+            //list.Add(56);
+            //list.Add(30);
+            //list.Add(70);
+            list.InsertFront(70);
+            list.InsertFront(30);
+            list.InsertFront(56);
+            list.Display();
             Console.Read();
           
         }
